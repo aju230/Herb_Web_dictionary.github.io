@@ -4,18 +4,31 @@
     <meta charset="utf-8">
     <title>web薬草図鑑</title>
     <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
       body {
         background-color: antiquewhite;
       }
       nav ul{
             list-style: none;
             display:flex;
+            border: 3px solid gray;
+          }
+          nav ul li{
+            flex: 1;
+            text-align: center;
+          }
+          .buttons {
+            margin: 50px auto;
           }
           h1 {
             font-size: 40px;
             text-align: center;
           }
-          div {
+          footer {
             border: solid gray;
             text-align: center;
           }
@@ -23,17 +36,47 @@
   </head>
   <body>
     <h1>web薬草図鑑</h1>
+    <div class="buttons">
     <nav>
       <ul>
-    <p>春</p>
-    <p>夏</p>
-    <p>秋</p>
-    <p>冬</p>
+        <li>
+    <button class="button" id="spr">春の薬草</button>
+    </li>
+    <li>
+    <button class="button" id="sum">夏の薬草</button>
+    </li>
+    <li>
+    <button class="button" id="aut">秋の薬草</button>
+    </li>
+    <li>
+    <button class="button" id="win">冬の薬草</button>
+    </li>
     </ul>
     </nav>
-    <script>
+    </div>
 
+    <div class="screen">
+      <div class="spr_sc">
+
+      </div>
+      <div class="sum_sc">
+        
+      </div>
+      <div class="aut_sc">
+        
+      </div>
+      <div class="win_sc">
+        
+      </div>
+    </div>
+    <script>
+      const button1 = document.getElementById("spr");
+      const button2 = document.getElementById("sum");
+      const button3 = document.getElementById("aut");
+      const button4 = document.getElementById("win");
     </script>
-    <div>ⒸKoki Shimizu 2025</div>
+    <footer>
+      <small>ⒸKoki Shimizu 2025</small>
+    </footer>
   </body>
 </html>
