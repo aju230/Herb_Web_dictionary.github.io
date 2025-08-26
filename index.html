@@ -5,7 +5,7 @@
     <title>web薬草図鑑</title>
     <style>
       * {
-        margin: 0px;
+        margin: 10px auto;
         padding: 0px;
         box-sizing: border-box;
       }
@@ -21,9 +21,6 @@
             flex: 1;
             text-align: center;
           }
-          .buttons {
-            margin: 50px auto;
-          }
           h1 {
             font-size: 40px;
             text-align: center;
@@ -36,44 +33,55 @@
   </head>
   <body>
     <h1>web薬草図鑑</h1>
-    <div class="buttons">
     <nav>
       <ul>
         <li>
-    <button class="button" id="spr">春の薬草</button>
+        <label><button onclick="tos();">Top</button></label>
+    </li>
+        <li>
+    <label><button onclick="spr();">春の薬草</button></label>
     </li>
     <li>
-    <button class="button" id="sum">夏の薬草</button>
+    <label><button onclick="sum();">夏の薬草</button></label>
     </li>
     <li>
-    <button class="button" id="aut">秋の薬草</button>
+    <label><button onclick="aut();">秋の薬草</button></label>
     </li>
     <li>
-    <button class="button" id="win">冬の薬草</button>
+    <label><button onclick="win();">冬の薬草</button></label>
     </li>
     </ul>
     </nav>
-    </div>
-
-    <div class="screen">
-      <div class="spr_sc">
-
-      </div>
-      <div class="sum_sc">
-        
-      </div>
-      <div class="aut_sc">
-        
-      </div>
-      <div class="win_sc">
-        
-      </div>
-    </div>
+    <h2 id="agenda">web薬草図鑑へようこそ！</h2>
+    <p id="detail">top画面内容</p>
     <script>
-      const button1 = document.getElementById("spr");
-      const button2 = document.getElementById("sum");
-      const button3 = document.getElementById("aut");
-      const button4 = document.getElementById("win");
+      const agenda = document.getElementById("agenda");
+      const detail = document.getElementById("detail");
+
+      function tos() {
+      agenda.innerHTML = "<h2>トップ</h2>";
+      detail.innerHTML = "<p>トップ内容</p>";  
+      }
+      function spr() {
+      agenda.innerHTML = "<h2>春の薬草</h2>"; 
+      detail.innerHTML = 
+      "<p>桜</p><p>ハナモクレン</p><p>梅</p><p>天南星</p>";  
+      }
+      function sum() {
+      agenda.innerHTML = "<h2>夏の薬草</h2>";
+      detail.innerHTML = 
+      "<p>どくだみ</p><p>クチナシ</p><p>紫蘇</p><p>ハイビスカス</p>";   
+      }
+      function aut() {
+      agenda.innerHTML = "<h2>秋の薬草</h2>"; 
+      detail.innerHTML = 
+      "<p>菊花</p><p>柿（かき）</p><p>葛（クズ）</p><p>生姜</p>";  
+      }
+      function win() {
+      agenda.innerHTML = "<h2>冬の薬草</h2>";  
+      detail.innerHTML = 
+      "<p>みかん</p><p>松</p><p>枇杷</p><p>ローズマリー</p>"; 
+      }
     </script>
     <footer>
       <small>ⒸKoki Shimizu 2025</small>
