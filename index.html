@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>web薬草図鑑</title>
+    <title>身近な薬草web図鑑</title>
     <style>
       * {
         margin: 0px;
@@ -43,6 +43,9 @@
             border: 5px double cadetblue;
             text-align: center;
           }
+          #bg {
+            transition: all 0.5s linear 0s;
+          }
           #sco {
             color: salmon;
             font-size: 50px;
@@ -64,7 +67,7 @@
   <body>
     <div id="wrap">
     <header>
-      <h1>web薬草図鑑</h1>
+      <h1>身近な薬草web図鑑</h1>
     </header>
     <nav>
       <ul>
@@ -86,20 +89,20 @@
     </ul>
     </nav>
     <section id="bg">
-    <h2 id="agenda">web薬草図鑑へようこそ！</h2>
-    <a id="detail">
-      <p>製作者：清水幸希</p>
-      <h3>このページの説明</h3>
-      <p>内容</p>
-    </a>
+    <h2 id="agenda"></h2>
+    <a id="detail"></a>
     </section>
     <script>
       const agenda = document.getElementById("agenda");
       const detail = document.getElementById("detail");
       const bg = document.getElementById("bg");
 
+      agenda.innerHTML = "<h2>web薬草図鑑へようこそ！</h2>";
+      detail.innerHTML = 
+      "<p>製作者：清水幸希</p><h3>・このページの説明</h3><p>身近にある草や花、実はそれは雑草に見えても昔では薬草として使われているかも知れません。そんなちょっとした豆知識を私自身が撮影した写真やそれぞれの薬草の効能を説明し、知っておくと面白いとなるようなサイトを目指しております。</p>";
+
       function tos() {
-      agenda.innerHTML = "<h3>web薬草図鑑へようこそ！</h3>";
+      agenda.innerHTML = "<h2>web薬草図鑑へようこそ！</h2>";
       detail.innerHTML = "<p>トップ内容</p>";
       bg.style.backgroundColor = "";
       }
