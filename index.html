@@ -5,17 +5,31 @@
     <title>web薬草図鑑</title>
     <style>
       * {
-        margin: 10px auto;
+        margin: 0px;
         padding: 0px;
         box-sizing: border-box;
       }
-      body {
-        background-color: antiquewhite;
+      #wrap {
+        width: 800px;
+        margin: 0px auto;
       }
+      body {
+        background-color: azure;
+      }
+      section {
+        border: 5px double cadetblue;
+      }
+      button {
+                padding: 0px;
+                font-size: 30px;
+                width: 155px;
+                height: 70px;
+                color: cadetblue;
+            }
       nav ul{
             list-style: none;
             display:flex;
-            border: 3px solid gray;
+            border: 5px double cadetblue;
           }
           nav ul li{
             flex: 1;
@@ -26,65 +40,97 @@
             text-align: center;
           }
           footer {
-            border: solid gray;
+            border: 5px double cadetblue;
             text-align: center;
+          }
+          #sco {
+            color: salmon;
+            font-size: 50px;
+          }
+          #smco {
+            color: green;
+            font-size: 50px;
+          }
+          #aco {
+            color: brown;
+            font-size: 50px;
+          }
+          #wco {
+            color: midnightblue;
+            font-size: 50px;
           }
     </style>
   </head>
   <body>
-    <h1>web薬草図鑑</h1>
+    <div id="wrap">
+    <header>
+      <h1>web薬草図鑑</h1>
+    </header>
     <nav>
       <ul>
         <li>
         <label><button onclick="tos();">Top</button></label>
     </li>
         <li>
-    <label><button onclick="spr();">春の薬草</button></label>
+    <label><button onclick="spr();"><a id='sco'>春</a>の薬草</button></label>
     </li>
     <li>
-    <label><button onclick="sum();">夏の薬草</button></label>
+    <label><button onclick="sum();"><a id='smco'>夏</a>の薬草</button></label>
     </li>
     <li>
-    <label><button onclick="aut();">秋の薬草</button></label>
+    <label><button onclick="aut();"><a id='aco'>秋</a>の薬草</button></label>
     </li>
     <li>
-    <label><button onclick="win();">冬の薬草</button></label>
+    <label><button onclick="win();"><a id='wco'>冬</a>の薬草</button></label>
     </li>
     </ul>
     </nav>
+    <section id="bg">
     <h2 id="agenda">web薬草図鑑へようこそ！</h2>
-    <p id="detail">top画面内容</p>
+    <a id="detail">
+      <p>製作者：清水幸希</p>
+      <h3>このページの説明</h3>
+      <p>内容</p>
+    </a>
+    </section>
     <script>
       const agenda = document.getElementById("agenda");
       const detail = document.getElementById("detail");
+      const bg = document.getElementById("bg");
 
       function tos() {
-      agenda.innerHTML = "<h2>トップ</h2>";
-      detail.innerHTML = "<p>トップ内容</p>";  
+      agenda.innerHTML = "<h3>web薬草図鑑へようこそ！</h3>";
+      detail.innerHTML = "<p>トップ内容</p>";
+      bg.style.backgroundColor = "";
       }
       function spr() {
-      agenda.innerHTML = "<h2>春の薬草</h2>"; 
+      agenda.innerHTML = "<h2><a id='sco'>春</a>の薬草</h2>"; 
       detail.innerHTML = 
-      "<p>桜</p><img src='spring/桜.jpg' height='300' width='200'><p>ハナモクレン</p><img src='spring/はなもくれん.jpg' height='300' width='200'><p>梅</p><img src='spring/梅.jpg' height='300' width='200'><p>天南星</p><img src='spring/天南星.jpg' height='300' width='200'>";  
+      "<h3>・桜</h3><img src='spring/桜.jpg' height='300' width='350'><h3>・ハナモクレン</h3><img src='spring/はなもくれん.jpg' height='300' width='200'><h3>・梅</h3><img src='spring/梅.jpg' height='300' width='200'><h3>・天南星</h3><img src='spring/天南星.jpg' height='300' width='200'>";  
+      bg.style.backgroundColor = "pink";
       }
       function sum() {
-      agenda.innerHTML = "<h2>夏の薬草</h2>";
+      agenda.innerHTML = "<h2><a id='smco'>夏</a>の薬草</h2>";
       detail.innerHTML = 
-      "<p>どくだみ</p><img src='summer/どくだみ.jpg' height='300' width='200'><p>クチナシ</p><img src='summer/クチナシ1.jpg' height='300' width='200'><p>紫蘇</p><img src='summer/赤しそ.jpg' height='300' width='200'><p>ハイビスカス</p><img src='summer/ハイビスカス.jpg' height='300' width='200'>";   
+      "<p>どくだみ</p><img src='summer/どくだみ.jpg' height='300' width='200'><p>クチナシ</p><img src='summer/クチナシ1.jpg' height='300' width='200'><p>紫蘇</p><img src='summer/赤しそ.jpg' height='300' width='200'><p>ハイビスカス</p><img src='summer/ハイビスカス.jpg' height='300' width='200'>";
+      bg.style.backgroundColor = "lightgreen";   
       }
       function aut() {
-      agenda.innerHTML = "<h2>秋の薬草</h2>"; 
+      agenda.innerHTML = "<h2><a id='aco'>秋</a>の薬草</h2>"; 
       detail.innerHTML = 
-      "<p>菊花</p><img src='autumn/菊.jpg' height='300' width='200'><p>柿（かき）</p><img src='autumn/柿.jpg' height='300' width='200'><p>葛（クズ）</p><img src='autumn/葛根.jpg' height='300' width='200'><p>生姜</p><img src='autumn/生姜.jpg' height='300' width='200'>";  
+      "<p>菊花</p><img src='autumn/菊.jpg' height='300' width='200'><p>柿（かき）</p><img src='autumn/柿.jpg' height='300' width='200'><p>葛（クズ）</p><img src='autumn/葛根.jpg' height='300' width='200'><p>生姜</p><img src='autumn/生姜.jpg' height='300' width='200'>";
+      bg.style.backgroundColor = "sandybrown";  
       }
       function win() {
-      agenda.innerHTML = "<h2>冬の薬草</h2>";  
+      agenda.innerHTML = "<h2><a id='wco'>冬</a>の薬草</h2>";  
       detail.innerHTML = 
       "<p>みかん</p><img src='winter/みかん.jpg' height='300' width='200'><p>松</p><img src='winter/松.jpg' height='300' width='200'><p>枇杷</p><img src='winter/枇杷.jpg' height='300' width='200'><p>ローズマリー</p><img src='winter/ローズマリー.jpg' height='300' width='200'>"; 
+      bg.style.backgroundColor = "lightskyblue";
       }
     </script>
     <footer>
       <small>ⒸKoki Shimizu 2025</small>
     </footer>
+    </div>
   </body>
 </html>
