@@ -75,16 +75,16 @@
         <label><button onclick="tos();">Top</button></label>
     </li>
         <li>
-    <label><button onclick="spr();"><a id='sco'>春</a>の薬草</button></label>
+    <label><button id="sp" onclick="spr();"><a id='sco'>春</a>の薬草</button></label>
     </li>
     <li>
-    <label><button onclick="sum();"><a id='smco'>夏</a>の薬草</button></label>
+    <label><button id="su" onclick="sum();"><a id='smco'>夏</a>の薬草</button></label>
     </li>
     <li>
-    <label><button onclick="aut();"><a id='aco'>秋</a>の薬草</button></label>
+    <label><button id="au" onclick="aut();"><a id='aco'>秋</a>の薬草</button></label>
     </li>
     <li>
-    <label><button onclick="win();"><a id='wco'>冬</a>の薬草</button></label>
+    <label><button id="wi" onclick="win();"><a id='wco'>冬</a>の薬草</button></label>
     </li>
     </ul>
     </nav>
@@ -99,40 +99,40 @@
 
       agenda.innerHTML = "<h2>web薬草図鑑へようこそ！</h2>";
       detail.innerHTML = 
-      "<p>製作者：清水幸希</p><h3>・このページの説明</h3><p>身近にある草や花、実はそれは雑草に見えても昔では薬草として使われているかも知れません。そんなちょっとした豆知識を私自身が撮影した写真やそれぞれの薬草の効能を説明し、知っておくと面白いとなるようなサイトを目指しております。</p>";
+      "<p>製作者：清水幸希</p><h3>・はじめに</h3><p>本サイトに訪れていただき、ありがとうございます。このサイトでは身近にある草や花、実はそれは雑草に見えても昔では薬草として使われているかも知れません。そんなちょっとした豆知識を私自身が撮影した写真やそれぞれの薬草の効能を説明し、知っておくと面白いとなるようなサイトを目指しております。</p><p>薬草を16種類掲載しております。</p><h3>・注意</h3><p>本サイトは医学的な治療法を説明するものではありません。効能は個人の体質、体調によって異なるため、生薬、ハーブの豆知識として閲覧していただければ幸いです。</p><h3>＝引用文献＝</h3>";
 
       function tos() {
       agenda.innerHTML = "<h2>web薬草図鑑へようこそ！</h2>";
-      detail.innerHTML = "<p>トップ内容</p>";
+      detail.innerHTML = "<p>製作者：清水幸希</p><h3>・はじめに</h3><p>本サイトに訪れていただき、ありがとうございます。このサイトでは身近にある草や花、実はそれは雑草に見えても昔では薬草として使われているかも知れません。そんなちょっとした豆知識を私自身が撮影した写真やそれぞれの薬草の効能を説明し、知っておくと面白いとなるようなサイトを目指しております。</p><p>薬草を16種類掲載しております。</p><h3>・注意</h3><p>本サイトは医学的な治療法を説明するものではありません。効能は個人の体質、体調によって異なるため、生薬、ハーブの豆知識として閲覧していただければ幸いです。</p><h3>＝引用文献＝</h3>";
       bg.style.backgroundColor = "";
       }
       function spr() {
       agenda.innerHTML = "<h2><a id='sco'>春</a>の薬草</h2>"; 
       detail.innerHTML = 
-      "<h3>・桜</h3><img src='spring/桜.jpg' height='300' width='350'><h3>・ハナモクレン</h3><img src='spring/はなもくれん.jpg' height='350' width='250'><h3>・梅</h3><img src='spring/梅.jpg' height='350' width='250'><h3>・天南星</h3><img src='spring/天南星.jpg' height='300' width='350'>";  
+      "<h3>・桜</h3><nav><ul><li><img src='spring/桜.jpg' height='300' width='350'></li><li><h3>ー使用部位ー</h3><p>花（塩漬け）、樹皮（桜皮）</p><h3>ー効能ー</h3><p>体内の熱を冷まし、毒素を排出（アンチエイジング）</p></li></ul><h3>・ハナモクレン</h3><ul><li><img src='spring/はなもくれん.jpg' height='350' width='250'></li><li>い</li></ul><h3>・梅</h3><ul><li><img src='spring/梅.jpg' height='350' width='250'></li><li>う</li></ul><h3>・天南星</h3><ul><li><img src='spring/天南星.jpg' height='300' width='350'></li><li>え</li></ul></nav>";  
       bg.style.backgroundColor = "pink";
       }
       function sum() {
       agenda.innerHTML = "<h2><a id='smco'>夏</a>の薬草</h2>";
       detail.innerHTML = 
-      "<p>どくだみ</p><img src='summer/どくだみ.jpg' height='350' width='250'><p>クチナシ</p><img src='summer/クチナシ1.jpg' height='350' width='250'><p>紫蘇</p><img src='summer/赤しそ.jpg' height='300' width='350'><p>ハイビスカス</p><img src='summer/ハイビスカス.jpg' height='350' width='250'>";
+      "<h3>・どくだみ</h3><img src='summer/どくだみ.jpg' height='350' width='250'><h3>・クチナシ</h3><img src='summer/クチナシ1.jpg' height='350' width='250'><h3>・紫蘇</h3><img src='summer/赤しそ.jpg' height='300' width='350'><h3>・ハイビスカス</h3><img src='summer/ハイビスカス.jpg' height='350' width='250'>";
       bg.style.backgroundColor = "lightgreen";   
       }
       function aut() {
       agenda.innerHTML = "<h2><a id='aco'>秋</a>の薬草</h2>"; 
       detail.innerHTML = 
-      "<p>菊花</p><img src='autumn/菊.jpg' height='350' width='250'><p>柿（かき）</p><img src='autumn/柿.jpg' height='350' width='250'><p>葛（クズ）</p><img src='autumn/葛根.jpg' height='350' width='250'><p>生姜</p><img src='autumn/生姜.jpg' height='350' width='250'>";
+      "<h3>・菊花</h3><img src='autumn/菊.jpg' height='350' width='250'><h3>・柿（かき）</h3><img src='autumn/柿.jpg' height='350' width='250'><h3>・葛（クズ）</h3><img src='autumn/葛根.jpg' height='350' width='250'><h3>・生姜</h3><img src='autumn/生姜.jpg' height='350' width='250'>";
       bg.style.backgroundColor = "sandybrown";  
       }
       function win() {
       agenda.innerHTML = "<h2><a id='wco'>冬</a>の薬草</h2>";  
       detail.innerHTML = 
-      "<p>みかん</p><img src='winter/みかん.jpg' height='300' width='350'><p>松</p><img src='winter/松.jpg' height='350' width='250'><p>枇杷</p><img src='winter/枇杷.jpg' height='300' width='350'><p>ローズマリー</p><img src='winter/ローズマリー.jpg' height='300' width='350'>"; 
+      "<h3>・みかん</h3><img src='winter/みかん.jpg' height='300' width='350'><h3>・松</h3><img src='winter/松.jpg' height='350' width='250'><h3>・枇杷</h3><img src='winter/枇杷.jpg' height='300' width='350'><h3>・ローズマリー</h3><img src='winter/ローズマリー.jpg' height='300' width='350'>"; 
       bg.style.backgroundColor = "lightskyblue";
       }
     </script>
     <footer>
-      <small>ⒸKoki Shimizu 2025</small>
+      <small><b>ⒸKoki Shimizu 2025</b></small>
     </footer>
     </div>
   </body>
