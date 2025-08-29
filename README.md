@@ -8,3 +8,4 @@
 <p>3. 伊藤優「身近な薬用植物ものしり帖」ベレ出版 2023</p>
 <p>4. 田中耕一郎「生薬と漢方薬の事典」日本文芸社 2022</p>
 <p>5. 東邦大学 ”薬用植物園　ハーブ園　「ウラシマソウ」” https://www.lab2.toho-u.ac.jp/phar/yakusou/herb/urashimaso.html （2025年8月29日参照）</p>
+<p>6. 日本家庭薬協会 ”季節の生薬について” https://www.hmaj.com/medicine.html （2025年8月29日参照）</p>
