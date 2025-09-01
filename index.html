@@ -19,6 +19,12 @@
       section {
         border: 5px double cadetblue;
       }
+      header {
+        margin: 0px; padding: 50px;
+        border: 5px double cadetblue;
+        background-color: #eee;
+        background-image:url(bg/bg.jpg);
+      }
       button {
                 padding: 0px;
                 font-size: 20px;
@@ -41,11 +47,28 @@
           }
           h1 {
             font-size: 40px;
+            color: skyblue;
+            text-shadow: 3px 3px 3px black;
             text-align: center;
           }
           footer {
             border: 5px double cadetblue;
             text-align: center;
+          }
+          #dd {
+            text-align: center;
+          }
+          #tq{
+            font-size: 20px;
+            font-style: bold;
+            color: skyblue;
+            text-shadow: 3px 3px 3px black;
+          }
+          #ne {
+            font-style: bold;
+            color: skyblue;
+            text-shadow: 3px 3px 3px black;
+            text-align: right;
           }
           #bg {
             transition: all 0.5s linear 0s;
@@ -71,7 +94,9 @@
   <body>
     <div id="wrap">
     <header>
-      <h1>身近な薬草web図鑑</h1>
+      <p id="tq">知っておくと面白い！</p>
+      <h1>ー身近な薬草web図鑑ー</h1>
+      <b><p id="ne"><br>製作者：清水幸希</p></b>
     </header>
     <nav>
       <ul>
@@ -101,13 +126,13 @@
       const detail = document.getElementById("detail");
       const bg = document.getElementById("bg");
 
-      agenda.innerHTML = "<h2>web薬草図鑑へようこそ！</h2>";
+      agenda.innerHTML = "<h2 id='dd'>web薬草図鑑へようこそ！</h2>";
       detail.innerHTML = 
-      "<p>製作者：清水幸希</p><br><h3>・はじめに</h3><p>本サイトに訪れていただき、ありがとうございます。このサイトでは身近にある草や花、実はそれは雑草に見えても昔では薬草として使われているかも知れません。そんなちょっとした豆知識を私自身が撮影した写真やそれぞれの薬草の効能を説明し、知っておくと面白いとなるようなサイトを目指しております。</p><p>薬草を16種類掲載しております。</p><br><h3>・注意</h3><p>本サイトは医学的な治療法を説明するものではありません。効能は個人の体質、体調によって異なるため、生薬、ハーブの豆知識として閲覧していただければ幸いです。</p><br><br><h3>＝参考文献＝</h3><small>1. 薬日本堂「薬膳・漢方の食材帳」実業之日本社 2021</small><br><small>2. 小林香里「温めも　デトックスも　いつもの飲み物にちょい足しするだけ！薬膳ドリンク」河出書房新社 2020</small><br><small>3. 伊藤優「身近な薬用植物ものしり帖」ベレ出版 2023</small><br><small>4. 田中耕一郎「生薬と漢方薬の事典」日本文芸社 2022</small><br><small>5. 東邦大学 ”薬用植物園　ハーブ園　「ウラシマソウ」” <a href = 'https://www.lab2.toho-u.ac.jp/phar/yakusou/herb/urashimaso.html'> https://www.lab2.toho-u.ac.jp/phar/yakusou/herb/urashimaso.html</a> （2025年8月29日参照）</small><br><small>6. 日本家庭薬協会 ”季節の生薬について” <a href = 'https://www.hmaj.com/medicine.html'> https://www.hmaj.com/medicine.html</a> （2025年8月29日参照）</small>";
+      "<br><h3>・はじめに</h3><p>本サイトに訪れていただき、ありがとうございます。このサイトでは身近にある草や花、実はそれは雑草に見えても昔では薬草として使われているかも知れません。そんなちょっとした豆知識を私自身が撮影した写真やそれぞれの薬草の効能を説明し、知っておくと面白いとなるようなサイトを目指しております。</p><p>薬草を16種類掲載しております。</p><br><h3>・注意</h3><p>本サイトは医学的な治療法を説明するものではありません。効能は個人の体質、体調によって異なるため、生薬、ハーブの豆知識として閲覧していただければ幸いです。</p><br><br><h3>＝参考文献＝</h3><small>1. 薬日本堂「薬膳・漢方の食材帳」実業之日本社 2021</small><br><small>2. 小林香里「温めも　デトックスも　いつもの飲み物にちょい足しするだけ！薬膳ドリンク」河出書房新社 2020</small><br><small>3. 伊藤優「身近な薬用植物ものしり帖」ベレ出版 2023</small><br><small>4. 田中耕一郎「生薬と漢方薬の事典」日本文芸社 2022</small><br><small>5. 東邦大学 ”薬用植物園　ハーブ園　「ウラシマソウ」” <a href = 'https://www.lab2.toho-u.ac.jp/phar/yakusou/herb/urashimaso.html'> https://www.lab2.toho-u.ac.jp/phar/yakusou/herb/urashimaso.html</a> （2025年8月29日参照）</small><br><small>6. 日本家庭薬協会 ”季節の生薬について” <a href = 'https://www.hmaj.com/medicine.html'> https://www.hmaj.com/medicine.html</a> （2025年8月29日参照）</small>";
 
       function tos() {
-      agenda.innerHTML = "<h2>web薬草図鑑へようこそ！</h2>";
-      detail.innerHTML = "<p>製作者：清水幸希</p><br><h3>・はじめに</h3><p>本サイトに訪れていただき、ありがとうございます。このサイトでは身近にある草や花、実はそれは雑草に見えても昔では薬草として使われているかも知れません。そんなちょっとした豆知識を私自身が撮影した写真やそれぞれの薬草の効能を説明し、知っておくと面白いとなるようなサイトを目指しております。</p><p>薬草を16種類掲載しております。</p><br><h3>・注意</h3><p>本サイトは医学的な治療法を説明するものではありません。効能は個人の体質、体調によって異なるため、生薬、ハーブの豆知識として閲覧していただければ幸いです。</p><br><br><h3>＝参考文献＝</h3><small>1. 薬日本堂「薬膳・漢方の食材帳」実業之日本社 2021</small><br><small>2. 小林香里「温めも　デトックスも　いつもの飲み物にちょい足しするだけ！薬膳ドリンク」河出書房新社 2020</small><br><small>3. 伊藤優「身近な薬用植物ものしり帖」ベレ出版 2023</small><br><small>4. 田中耕一郎「生薬と漢方薬の事典」日本文芸社 2022</small><br><small>5. 東邦大学 ”薬用植物園　ハーブ園　「ウラシマソウ」” <a href = 'https://www.lab2.toho-u.ac.jp/phar/yakusou/herb/urashimaso.html'> https://www.lab2.toho-u.ac.jp/phar/yakusou/herb/urashimaso.html</a> （2025年8月29日参照）</small><br><small>6. 日本家庭薬協会 ”季節の生薬について” <a href = 'https://www.hmaj.com/medicine.html'> https://www.hmaj.com/medicine.html</a> （2025年8月29日参照）</small>";
+      agenda.innerHTML = "<h2 id='dd'>web薬草図鑑へようこそ！</h2>";
+      detail.innerHTML = "<br><h3>・はじめに</h3><p>本サイトに訪れていただき、ありがとうございます。このサイトでは身近にある草や花、実はそれは雑草に見えても昔では薬草として使われているかも知れません。そんなちょっとした豆知識を私自身が撮影した写真やそれぞれの薬草の効能を説明し、知っておくと面白いとなるようなサイトを目指しております。</p><p>薬草を16種類掲載しております。</p><br><h3>・注意</h3><p>本サイトは医学的な治療法を説明するものではありません。効能は個人の体質、体調によって異なるため、生薬、ハーブの豆知識として閲覧していただければ幸いです。</p><br><br><h3>＝参考文献＝</h3><small>1. 薬日本堂「薬膳・漢方の食材帳」実業之日本社 2021</small><br><small>2. 小林香里「温めも　デトックスも　いつもの飲み物にちょい足しするだけ！薬膳ドリンク」河出書房新社 2020</small><br><small>3. 伊藤優「身近な薬用植物ものしり帖」ベレ出版 2023</small><br><small>4. 田中耕一郎「生薬と漢方薬の事典」日本文芸社 2022</small><br><small>5. 東邦大学 ”薬用植物園　ハーブ園　「ウラシマソウ」” <a href = 'https://www.lab2.toho-u.ac.jp/phar/yakusou/herb/urashimaso.html'> https://www.lab2.toho-u.ac.jp/phar/yakusou/herb/urashimaso.html</a> （2025年8月29日参照）</small><br><small>6. 日本家庭薬協会 ”季節の生薬について” <a href = 'https://www.hmaj.com/medicine.html'> https://www.hmaj.com/medicine.html</a> （2025年8月29日参照）</small>";
 
       bg.style.backgroundColor = "";
       }
